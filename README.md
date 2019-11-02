@@ -44,5 +44,4 @@ Eat-Da-Burger
 ```
 # Packages Used
 https://www.npmjs.com/package/handlebars
-
 https://www.npmjs.com/package/mysql
