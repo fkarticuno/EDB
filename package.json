@@ -1,0 +1,25 @@
+{
+  "name": "edb",
+  "version": "1.0.0",
+  "description": "Eat-Da-Burger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkarticuno/burger.git"
+  },
+  "author": "Frederick Articuno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fkarticuno/burger/issues"
+  },
+  "homepage": "https://github.com/fkarticuno/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7"
+  }
+}
