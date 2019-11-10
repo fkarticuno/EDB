@@ -3,6 +3,7 @@ $(document).ready(function() {
   var $newItemInput = $("input.new-item");
   // Our new burgers will go inside the burgerContainer
   var $burgerContainer = $(".burger-container");
+  var $burgerContainerPerm = $(".burger-container-perm");
   // Adding event listeners for deleting, editing, and adding burgers
   $(document).on("click", "button.delete", deleteBurger);
   $(document).on("click", "button.complete", toggleComplete);
@@ -13,9 +14,10 @@ $(document).ready(function() {
 
   // Our initial burgers array
   var burgers = [];
-
+  var burgersperm = [];
   // Getting burgers from database when page loads
   getburgers();
+  getburgersperm();
 
   // This function resets the burgers displayed with new burgers from the database
   function initializeRows() {
@@ -26,7 +28,14 @@ $(document).ready(function() {
     }
     $burgerContainer.prepend(rowsToAdd);
   }
-
+  function initializeRowsPerm() {
+    $burgerContainerPerm.empty();
+    var rowsToAdd = [];
+    for (var i = 0; i < burgersperm.length; i++) {
+      rowsToAdd.push(createNewRow2(burgersperm[i]));
+    }
+    $burgerContainerPerm.prepend(rowsToAdd);
+  }
   // This function grabs burgers from the database and updates the view
   function getburgers() {
     $.get("/api/burgers", function(data) {
@@ -35,6 +44,12 @@ $(document).ready(function() {
     });
   }
 
+  function getburgersperm() {
+    $.get("/api/burgers_perm", function(data) {
+      burgersperm = data;
+      initializeRowsPerm();
+    });
+  }
   // This function deletes a burger when the user clicks the delete button
   function deleteBurger(event) {
     event.stopPropagation();
@@ -108,7 +123,6 @@ $(document).ready(function() {
         "</li>"
       ].join("")
     );
-
     $newInputRow.find("button.delete").data("id", burger.id);
     $newInputRow.find("input.edit").css("display", "none");
     $newInputRow.data("burger", burger);
@@ -119,6 +133,21 @@ $(document).ready(function() {
     return $newInputRow;
   }
 
+  // This function constructs a burger-item row
+  function createNewRow2(burger) {
+    var $newInputRow2 = $(
+      [
+        "<li class='list-group-item burger-item-perm'>",
+        "<span>",
+        burger.text,
+        "</span>",
+        "</li>"
+      ].join("")
+    );
+    $newInputRow2.data("burger", burger);
+    return $newInputRow2;
+  }
+
   // This function inserts a new burger into our database and then updates the view
   function insertBurger(event) {
     event.preventDefault();
@@ -126,9 +155,8 @@ $(document).ready(function() {
       text: $newItemInput.val().trim(),
       complete: false
     };
-    var burger_perm = burger.text;
     $.post("/api/burgers", burger, getburgers);
-    $.post("/api/burgers_perm", burger_perm);
+    $.post("/api/burgers_perm", burger, getburgersperm);
     $newItemInput.val("");
   }
 });

@@ -17,3 +17,9 @@ input.new-item:focus {
 .edit {
   width: 100%;
 }
+
+body {
+  background-image: url("https://images.pexels.com/photos/3052362/pexels-photo-3052362.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=5000");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -7,11 +7,9 @@
 
 // Requiring our models
 var db = require("../models");
-
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   // GET route for getting all of the burgers
   app.get("/api/burgers", function(req, res) {
     // findAll returns all entries for a table when used with no options
@@ -45,12 +43,11 @@ module.exports = function(app) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Burger.create({
+    db.BurgerPerm.create({
       text: req.body.text,
-      complete: req.body.complete
-    }).then(function(dbBurger) {
+    }).then(function(dbBurgerPerm) {
       // We have access to the new Burger as an argument inside of the callback function
-      res.json(dbBurger);
+      res.json(dbBurgerPerm);
     })
       .catch(function(err) {
       // Whenever a validation or flag fails, an error is thrown
@@ -61,9 +58,9 @@ module.exports = function(app) {
 
   app.get("/api/burgers_perm", function(req, res) {
     // findAll returns all entries for a table when used with no options
-    db.Burger.findAll({}).then(function(dbBurger) {
+    db.BurgerPerm.findAll({}).then(function(dbBurgerPerm) {
       // We have access to the burgers as an argument inside of the callback function
-      res.json(dbBurger);
+      res.json(dbBurgerPerm);
     });
   });
   //===============================
