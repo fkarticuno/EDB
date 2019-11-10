@@ -1,0 +1,52 @@
+2019-11-10T22:57:18.699769+00:00 app[api]: Initial release by user mckiyoshi@gmail.com
+2019-11-10T22:57:18.699769+00:00 app[api]: Release v1 created by user mckiyoshi@gmail.com
+2019-11-10T22:57:18.809797+00:00 app[api]: Enable Logplex by user mckiyoshi@gmail.com
+2019-11-10T22:57:18.809797+00:00 app[api]: Release v2 created by user mckiyoshi@gmail.com
+2019-11-10T23:05:55.000000+00:00 app[api]: Build started by user mckiyoshi@gmail.com
+2019-11-10T23:06:10.247679+00:00 app[api]: Deploy cad9373f by user mckiyoshi@gmail.com
+2019-11-10T23:06:10.266717+00:00 app[api]: Scaled to web@1:Free by user mckiyoshi@gmail.com
+2019-11-10T23:06:10.247679+00:00 app[api]: Release v3 created by user mckiyoshi@gmail.com
+2019-11-10T23:06:11.000000+00:00 app[api]: Build succeeded
+2019-11-10T23:06:12.877881+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-11-10T23:06:15.079892+00:00 app[web.1]: 
+2019-11-10T23:06:15.079918+00:00 app[web.1]: > validations@1.0.0 start /app
+2019-11-10T23:06:15.079920+00:00 app[web.1]: > node server.js
+2019-11-10T23:06:15.079923+00:00 app[web.1]: 
+2019-11-10T23:06:15.563145+00:00 app[web.1]: Sun, 10 Nov 2019 23:06:15 GMT sequelize deprecated String based operators are now deprecated. Please use Symbol based operators for better security, read more at http://docs.sequelizejs.com/manual/tutorial/querying.html#operators at node_modules/sequelize/lib/sequelize.js:245:13
+2019-11-10T23:06:15.605011+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2019-11-10T23:06:15.605015+00:00 app[web.1]: at /app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19
+2019-11-10T23:06:15.605017+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2019-11-10T23:06:15.605020+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:547:31)
+2019-11-10T23:06:15.605022+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:604:18)
+2019-11-10T23:06:15.605024+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:649:10)
+2019-11-10T23:06:15.605026+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:725:18)
+2019-11-10T23:06:15.605029+00:00 app[web.1]: at _drainQueueStep (/app/node_modules/bluebird/js/release/async.js:93:12)
+2019-11-10T23:06:15.605031+00:00 app[web.1]: at _drainQueue (/app/node_modules/bluebird/js/release/async.js:86:9)
+2019-11-10T23:06:15.605034+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:102:5)
+2019-11-10T23:06:15.605036+00:00 app[web.1]: at Immediate.Async.drainQueues [as _onImmediate] (/app/node_modules/bluebird/js/release/async.js:15:14)
+2019-11-10T23:06:15.605038+00:00 app[web.1]: at processImmediate (internal/timers.js:439:21)
+2019-11-10T23:06:25.683363+00:00 heroku[web.1]: State changed from starting to crashed
+2019-11-10T23:06:25.687493+00:00 heroku[web.1]: State changed from crashed to starting
+2019-11-10T23:06:25.668195+00:00 heroku[web.1]: Process exited with status 0
+2019-11-10T23:06:28.948705+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-11-10T23:06:32.097585+00:00 app[web.1]: 
+2019-11-10T23:06:32.097607+00:00 app[web.1]: > validations@1.0.0 start /app
+2019-11-10T23:06:32.097610+00:00 app[web.1]: > node server.js
+2019-11-10T23:06:32.097612+00:00 app[web.1]: 
+2019-11-10T23:06:33.192242+00:00 app[web.1]: Sun, 10 Nov 2019 23:06:33 GMT sequelize deprecated String based operators are now deprecated. Please use Symbol based operators for better security, read more at http://docs.sequelizejs.com/manual/tutorial/querying.html#operators at node_modules/sequelize/lib/sequelize.js:245:13
+2019-11-10T23:06:33.245735+00:00 app[web.1]: Unhandled rejection SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+2019-11-10T23:06:33.245739+00:00 app[web.1]: at /app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:139:19
+2019-11-10T23:06:33.245742+00:00 app[web.1]: at tryCatcher (/app/node_modules/bluebird/js/release/util.js:16:23)
+2019-11-10T23:06:33.245745+00:00 app[web.1]: at Promise._settlePromiseFromHandler (/app/node_modules/bluebird/js/release/promise.js:547:31)
+2019-11-10T23:06:33.245747+00:00 app[web.1]: at Promise._settlePromise (/app/node_modules/bluebird/js/release/promise.js:604:18)
+2019-11-10T23:06:33.245749+00:00 app[web.1]: at Promise._settlePromise0 (/app/node_modules/bluebird/js/release/promise.js:649:10)
+2019-11-10T23:06:33.245751+00:00 app[web.1]: at Promise._settlePromises (/app/node_modules/bluebird/js/release/promise.js:725:18)
+2019-11-10T23:06:33.245753+00:00 app[web.1]: at _drainQueueStep (/app/node_modules/bluebird/js/release/async.js:93:12)
+2019-11-10T23:06:33.245755+00:00 app[web.1]: at _drainQueue (/app/node_modules/bluebird/js/release/async.js:86:9)
+2019-11-10T23:06:33.245757+00:00 app[web.1]: at Async._drainQueues (/app/node_modules/bluebird/js/release/async.js:102:5)
+2019-11-10T23:06:33.245759+00:00 app[web.1]: at Immediate.Async.drainQueues [as _onImmediate] (/app/node_modules/bluebird/js/release/async.js:15:14)
+2019-11-10T23:06:33.245762+00:00 app[web.1]: at processImmediate (internal/timers.js:439:21)
+2019-11-10T23:06:43.397816+00:00 heroku[web.1]: State changed from starting to crashed
+2019-11-10T23:06:43.371484+00:00 heroku[web.1]: Process exited with status 0
+2019-11-10T23:16:31.750980+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=eat-da-burger-fka.herokuapp.com request_id=a7226d11-d3fe-469a-9242-da2a13e9d4a3 fwd="73.251.223.217" dyno= connect= service= status=503 bytes= protocol=https
+2019-11-10T23:16:32.317691+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=eat-da-burger-fka.herokuapp.com request_id=3e09252b-f170-4c9d-a2c2-de4b2a2c62d2 fwd="73.251.223.217" dyno= connect= service= status=503 bytes= protocol=https
