@@ -127,8 +127,9 @@ $(document).ready(function() {
     $newInputRow.find("input.edit").css("display", "none");
     $newInputRow.data("burger", burger);
     if (burger.complete) {
-      
-      //$newInputRow.find("span").css("text-decoration", "line-through");
+      $newInputRow.find("span").css("text-shadow", "0px 0px 10px green");
+      $newInputRow.find("span").css("font-size", "2em");
+      $newInputRow.find(".complete").text("UnFavorite it");
     }
     return $newInputRow;
   }

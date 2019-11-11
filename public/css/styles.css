@@ -23,3 +23,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#bga {
+  background-color: white;
+}

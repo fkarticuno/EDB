@@ -10,38 +10,29 @@ Eat-Da-Burger
 ```
 .
 ├── config
-│   ├── connection.js
-│   └── orm.js
+│   ├── config.json
 │ 
-├── controllers
-│   └── burgers_controller.js
-│
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-│
 ├── models
-│   └── burger.js
+│   └── burger_perm.js
+│   └── burgers.js
+│   └── index.js
+├── public
+│   ├── css
+│       └── styles.css
+│   └── js
+│       └── views.js
+│   └── index.html
+│
+├── routes
+│   └── api-routes.js
 │ 
 ├── node_modules
 │ 
 ├── package.json
 │
-├── public
-│   └── assets
-│       ├── css
-│       │   └── burger_style.css
-│       └── img
-│           └── burger.png
-│   
-│
 ├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
 ```
 # Packages Used
-https://www.npmjs.com/package/handlebars
-https://www.npmjs.com/package/mysql
+https://www.npmjs.com/package/express
+https://www.npmjs.com/package/mysql2
+https://www.npmjs.com/package/sequelize
