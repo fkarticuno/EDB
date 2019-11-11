@@ -5,7 +5,7 @@ $(document).ready(function() {
   var $burgerContainer = $(".burger-container");
   var $burgerContainerPerm = $(".burger-container-perm");
   // Adding event listeners for deleting, editing, and adding burgers
-  $(document).on("click", "button.delete", deleteBurger );
+  $(document).on("click", "button.delete", deleteBurger);
   $(document).on("click", "button.complete", toggleComplete);
   $(document).on("click", ".burger-item", editBurger);
   $(document).on("keyup", ".burger-item", finishEdit);
@@ -80,10 +80,15 @@ $(document).ready(function() {
       </body>
       </html>
 */
+    playSound();
     $.ajax({
       method: "DELETE",
       url: "/api/burgers/" + id
     }).then(getburgers);
+  }
+  
+  function playSound() {
+    $newInputRow.find("audio").attr("autoplay");
   }
 
   // This function handles showing the input box for a user to edit a burger
@@ -137,7 +142,7 @@ $(document).ready(function() {
 
   // This function constructs a burger-item row
   function createNewRow(burger) {
-    var $newInputRow = $(
+    $newInputRow = $(
       [
         "<li class='list-group-item burger-item'>",
         "<span>",
@@ -146,6 +151,10 @@ $(document).ready(function() {
         "<input type='text' class='edit' style='display: none;'>",
         "<button class='delete btn btn-danger'>Devour it</button>",
         "<button class='complete btn btn-primary'>Favorite it</button>",
+        "<audio id='player' autoplay> ",
+        "<source id='eat' src='https://www.myinstants.com/media/sounds/sandwich_2.mp3'",
+        //https://www.myinstants.com/media/sounds/nom-nom-nom_gPJiWn4.mp3'",
+        "type='audio/mpeg'> </audio>",
         "</li>"
       ].join("")
     );
