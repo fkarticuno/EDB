@@ -11,11 +11,14 @@ Eat-Da-Burger
 .
 ├── config
 │   ├── config.json
+│
+├── imgs 
 │ 
 ├── models
 │   └── burger_perm.js
 │   └── burgers.js
 │   └── index.js
+│
 ├── public
 │   ├── css
 │       └── styles.css
@@ -32,6 +35,9 @@ Eat-Da-Burger
 │
 ├── server.js
 ```
+# Notes
+Please see https://github.com/fkarticuno/burger/tree/master/imgs for progression images
+
 # Packages Used
 https://www.npmjs.com/package/express
 https://www.npmjs.com/package/mysql2
