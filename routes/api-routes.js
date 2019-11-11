@@ -63,6 +63,10 @@ module.exports = function(app) {
       res.json(dbBurgerPerm);
     });
   });
+
+  app.get('/api/play', function(req, res){
+    res.send(__dirname+'\\nom-nom-nom_gPJiWn4.mp3');
+});
   //===============================
 
   // DELETE route for deleting burgers. We can get the id of the Burger to be deleted from

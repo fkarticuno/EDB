@@ -5,7 +5,7 @@ $(document).ready(function() {
   var $burgerContainer = $(".burger-container");
   var $burgerContainerPerm = $(".burger-container-perm");
   // Adding event listeners for deleting, editing, and adding burgers
-  $(document).on("click", "button.delete", deleteBurger);
+  $(document).on("click", "button.delete", deleteBurger );
   $(document).on("click", "button.complete", toggleComplete);
   $(document).on("click", ".burger-item", editBurger);
   $(document).on("keyup", ".burger-item", finishEdit);
@@ -51,9 +51,35 @@ $(document).ready(function() {
     });
   }
   // This function deletes a burger when the user clicks the delete button
+
   function deleteBurger(event) {
     event.stopPropagation();
     var id = $(this).data("id");
+/* EXPECTED BEHAVIOR IS PLAY SOUND ON CLICK
+     ACTUAL BEHAVIOR IS NOTHING HAPPENS
+-- ATTEMPT TO UPDATE AUTOPLAYING PLAYER WITH VALID SOURCE
+    $("#play").attr("src", $.get("api/play")).then($("#play").play())
+-- ATTEMPT TO CALL <AUDIO ID=PLAYER> AND TELL IT TO PLAY  
+    $("#player").play())
+-- ALTERNATE ATTEMPT    
+    $("button").on('click', function(){
+    document.getElementById("player").play()
+    });  
+    TEST PASSED WITH W3SCHOOLS, BUT FAILED IN THIS IMPLEMENTATION
+    https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_audio_all
+    <!DOCTYPE html>
+      <html>
+      <body>
+      <audio controls id="one">
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      </audio>  
+      <script>
+      document.getElementById("one").play()
+      </script>
+      </body>
+      </html>
+*/
     $.ajax({
       method: "DELETE",
       url: "/api/burgers/" + id
