@@ -17,14 +17,16 @@ var connection;
 // }
 //===============================================================
 if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL);
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
 } else {
 	connection = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
 		password: 'password',
 		database: 'burgers_db'
-	});
+  });
+  var sequelize = new Sequelize(config.database, config.username, config.password, config);
 };
 //===============================================================
 fs
