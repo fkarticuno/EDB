@@ -14,11 +14,11 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 //===============================================================
-var sequelize = new Sequelize(process.env.JAWSDB_D, process.env.JAWSDB_U, process.env.JAWSDB_P, config)
+var sequelize = new Sequelize(process.env.JAWSDB_D, process.env.JAWSDB_U, process.env.JAWSDB_P, 'mysql')
 var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+  var sequelize = new Sequelize(config.database, config.username, config.password, "gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "mysql");
 } else {
 	connection = mysql.createConnection({
 		host: 'localhost',
