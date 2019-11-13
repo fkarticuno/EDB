@@ -14,7 +14,7 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 //===============================================================
-var sequelize = new Sequelize(process.env.JAWSDB_D, process.env.JAWSDB_U, process.env.JAWSDB_P)
+var sequelize = new Sequelize(process.env.JAWSDB_D, process.env.JAWSDB_U, process.env.JAWSDB_P, config)
 var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
