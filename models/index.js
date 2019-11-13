@@ -18,7 +18,7 @@ var sequelize = new Sequelize(process.env.JAWSDB_D, process.env.JAWSDB_U, proces
 var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-  var sequelize = new Sequelize(config.database, config.username, config.password, "gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "mysql");
+  var sequelize = new Sequelize(config.database, config.username, config.password, {"host":"gtizpe105piw2gfq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"}, {"dialect":"mysql"});
 } else {
 	connection = mysql.createConnection({
 		host: 'localhost',
