@@ -6,7 +6,7 @@ Each burger in the waiting area also has a `Devour it!` and 'Favorite!` button. 
 
 ## [Try it yourself!](https://eat-da-burger-fka.herokuapp.com/) 
 
-![image](https://github.com/fkarticuno/CodingPortfolio/Assets/Images/15.png)
+![image](https://fkarticuno.github.io/CodingPortfolio/Assets/Images/15.png)
 
 ## Getting Started
 
